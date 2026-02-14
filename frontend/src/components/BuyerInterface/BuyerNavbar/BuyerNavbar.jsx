@@ -14,7 +14,7 @@ function BuyerNavbar() {
   const toggleProfileDrop = () => {
     setProfileDrop(!profileDrop);
   };
-  
+
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("campusrecycleuser"));
     setProfilePicture(user?.image);
@@ -44,10 +44,10 @@ function BuyerNavbar() {
       <ToastContainer />
       <div className="buyer-navbar">
         <div className="buyer-navbar-logo">
-          <img src="/logo.png" alt="" style={{ cursor: 'pointer' }} onClick={()=>{
-            if(window.location.pathname === '/buyer/productlist'){
+          <img src="/logo.png" alt="" style={{ cursor: 'pointer' }} onClick={() => {
+            if (window.location.pathname === '/buyer/productlist') {
               window.location.reload();
-            }else{
+            } else {
               navigate('/buyer/productlist');
             }
           }} />
@@ -55,9 +55,8 @@ function BuyerNavbar() {
         <div className="buyer-navbar-options">
           <Link
             to="/buyer/productlist"
-            className={`buyer-navbar-options-item ${
-              window.location.pathname === "/buyer/productlist" ? "active" : ""
-            }`}
+            className={`buyer-navbar-options-item ${window.location.pathname === "/buyer/productlist" ? "active" : ""
+              }`}
           >
             Products
           </Link>
@@ -71,6 +70,8 @@ function BuyerNavbar() {
             <img
               src={profilePicture ? profilePicture : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"}
               alt=""
+              style={{ cursor: 'pointer' }}
+              onClick={() => navigate('/student-profile')}
             />
           </div>
           {profileDrop && (

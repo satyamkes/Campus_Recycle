@@ -21,6 +21,8 @@ import PrivateRoute from './PrivateRoute'; // Adjust the import path as necessar
 import { Outlet } from 'react-router-dom';
 import About from '../screens/About';
 import AboutMotive from '../screens/AboutMotive';
+import Feedback from '../screens/Feedback';
+import Contact from '../screens/Contact';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <LandingPage /> },
       { path: 'access-account', element: <AccessAccount /> },
-      { path: 'getStarted', element:<PrivateRoute> <Getstart /> </PrivateRoute>},
+      { path: 'getStarted', element: <PrivateRoute> <Getstart /> </PrivateRoute> },
       { path: 'student-login', element: <LoginSignup /> },
       { path: 'student-signup', element: <LoginSignup /> },
       { path: 'forgotpassword', element: <ForgotPassword /> },
@@ -36,9 +38,11 @@ const router = createBrowserRouter([
       { path: 'student-profile', element: <PrivateRoute><Studentprofile /></PrivateRoute> },
       { path: 'about', element: <About /> },
       { path: 'aboutMotive', element: <AboutMotive /> },
+      { path: 'feedback', element: <Feedback /> },
+      { path: 'contact', element: <Contact /> },
     ],
   },
-  { 
+  {
     path: '/buyer',
     element: <PrivateRoute><div><Outlet /></div></PrivateRoute>,
     children: [
