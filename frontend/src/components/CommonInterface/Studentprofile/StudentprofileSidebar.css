@@ -5,102 +5,130 @@
   margin-top: 0;
   position: fixed;
   top: 0;
-  -webkit-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  transition: all var(--transition-base);
   width: 280px;
   z-index: 995;
-  padding: 30px 40px;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  font-family: 'Inter', sans-serif;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
+
 @media (max-width: 1199.98px) {
   .buyer-sidebar-main {
     width: 200px;
   }
 }
+
 @media (max-width: 991.98px) {
   .buyer-sidebar-main {
     top: 60px;
     margin-left: -575px;
-    -webkit-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
     transition: all 0.4s ease;
     z-index: 1041;
     background: #fff;
   }
 }
+
 @media (max-width: 575.98px) {
   .buyer-sidebar-main {
     width: 225px;
   }
 }
 
-.buyer-sidebar-main .logo{
+.buyer-sidebar-main .logo {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-lg);
 }
 
-.buyer-sidebar-main .logo img{
-  width: 50%;
+.buyer-sidebar-main .logo img {
+  width: 120px;
+  transition: transform var(--transition-base);
 }
 
-.buyer-sidebar-main .logo h5{
-  font-size: large;
+.buyer-sidebar-main .logo img:hover {
+  transform: scale(1.05);
 }
 
-.buyer-sidebar-navigation{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    margin-top: 1rem;
+.buyer-sidebar-main .logo h5 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
-.buyer-sidebar-navigation .navigation{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3rem;
+.buyer-sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-top: var(--spacing-lg);
+  width: 100%;
 }
 
-.buyer-sidebar-navigation .navigation a{
-    text-decoration: none;
-    color: rgb(57, 57, 57);
-    padding: 5px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin-top: 2rem;
+.buyer-sidebar-navigation .navigation {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-2xl);
+  width: 100%;
 }
 
-.buyer-sidebar-navigation .navigation a:hover{
-    color: red;
+.buyer-sidebar-navigation .navigation a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  margin-top: var(--spacing-md);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: var(--font-size-base);
+  transition: all var(--transition-base);
 }
 
-.buyer-sidebar-navigation .navigation a svg{
-  margin-right: 1rem;
+.buyer-sidebar-navigation .navigation a:hover {
+  color: var(--primary-green);
+  background: rgba(16, 185, 129, 0.05);
 }
 
-.buyer-sidebar-main .profile-info{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.buyer-sidebar-navigation .navigation a.active {
+  color: var(--primary-green);
+  background: rgba(16, 185, 129, 0.1);
+  font-weight: 600;
 }
 
-.buyer-sidebar-main .profile-info img{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+.buyer-sidebar-navigation .navigation a svg {
+  margin-right: var(--spacing-md);
 }
 
-.buyer-sidebar-main .profile-info p{
-    margin: 1rem 0px;
+.buyer-sidebar-main .profile-info {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.buyer-sidebar-main .profile-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-green);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buyer-sidebar-main .profile-info p {
+  margin: var(--spacing-md) 0;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
 }

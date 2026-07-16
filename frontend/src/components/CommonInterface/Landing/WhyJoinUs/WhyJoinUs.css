@@ -1,72 +1,138 @@
-.landing-why-join-us{
+.landing-why-join-us {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px 5%;
-    margin-bottom: 5rem;
+    padding: var(--spacing-md) 5% var(--spacing-2xl) 5%;
+    margin-bottom: var(--spacing-2xl);
+    animation: fadeInSection 0.8s ease-out;
 }
-.landing-why-join-us h4{
-    font-size: 35px;
+
+.landing-why-join-us h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.5rem);
     font-weight: 700;
-    margin: 4rem 0px;
+    margin: var(--spacing-xl) 0;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
 }
+
 .landing-why-join-us-main {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-}
-.landing-why-join-us-main-img{
-    width: 50%;
-}
-.landing-why-join-us-main-cards{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-}
-.landing-why-join-us-main-cards-row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-.landing-why-join-us-main-cards .landing-why-join-us-main-cards-row .why-join-us-points{
-    display: flex;
-    flex-direction: column;
-    width: 47%;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #6fff98;
-    margin: 0.5rem;
-    border-radius: 5px;
-    min-height: 28svh;
-}
-.landing-why-join-us-main-cards .why-join-us-points h6{
-    font-size: larger;
-}
-.landing-why-join-us-main-cards .why-join-us-points p{
-    text-align: justify;
-    margin: 1rem 0rem;
+    gap: var(--spacing-xl);
 }
 
-@media (max-width: 820px){
+.landing-why-join-us-main-img {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-why-join-us-main-img img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.landing-why-join-us-main-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    width: 55%;
+}
+
+.landing-why-join-us-main-cards-row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    width: 100%;
+}
+
+.why-join-us-points {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, var(--lighter-green) 0%, var(--light-green) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.1);
+    border-radius: 16px;
+    min-height: 180px;
+    transition: all var(--transition-base);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.why-join-us-points:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
+    background: linear-gradient(135deg, var(--light-green) 0%, var(--lighter-green) 100%);
+}
+
+.why-join-us-points h6 {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--dark-green);
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.01em;
+}
+
+.why-join-us-points p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Responsive Tablet */
+@media (max-width: 820px) {
     .landing-why-join-us-main {
         flex-direction: column;
+        gap: var(--spacing-xl);
     }
-    .landing-why-join-us-main-img{
-        width: 90%;
+
+    .landing-why-join-us-main-img {
+        width: 80%;
     }
-    .landing-why-join-us-main-cards{
-        width: 95%;
+
+    .landing-why-join-us-main-cards {
+        width: 100%;
     }
-    .landing-why-join-us-main-cards-row{
+
+    .landing-why-join-us-main-cards-row {
         flex-direction: column;
     }
-    .landing-why-join-us-main-cards .landing-why-join-us-main-cards-row .why-join-us-points{
-        width: 90%;
-        margin: 1.2rem 0rem;
+
+    .why-join-us-points {
+        width: 100%;
+        margin: 0;
+        min-height: 160px;
+    }
+}
+
+/* Responsive Mobile */
+@media (max-width: 540px) {
+    .landing-why-join-us {
+        padding: var(--spacing-xl) 4%;
+    }
+
+    .landing-why-join-us h4 {
+        font-size: clamp(1.75rem, 6vw, 2rem);
+    }
+
+    .landing-why-join-us-main-img {
+        width: 100%;
+    }
+
+    .why-join-us-points {
+        padding: var(--spacing-md);
+    }
+
+    .why-join-us-points h6 {
+        font-size: var(--font-size-base);
     }
 }

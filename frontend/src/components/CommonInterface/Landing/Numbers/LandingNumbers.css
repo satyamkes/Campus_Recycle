@@ -1,60 +1,77 @@
-.landing-numbers{
-    padding: 0px 15%;
+.landing-numbers {
+    padding: var(--spacing-2xl) 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Inter', sans-serif;
+    margin: var(--spacing-xl) 0;
+    animation: fadeIn 0.8s ease-out;
 }
 
-.landing-numbers div{
+.landing-numbers div {
     display: flex;
     width: 90%;
     justify-content: center;
 }
 
-.landing-numbers-element{
+.landing-numbers-element {
     display: flex;
     flex-direction: column;
     width: 20%;
+    animation: slideUp 0.8s ease-out;
 }
 
-.landing-numbers-element-number{
-    font-size: 32px;
+.landing-numbers-element-number {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin: var(--spacing-sm) 0;
+    color: var(--primary-green);
+    letter-spacing: -0.02em;
+}
+
+.landing-numbers-element-subject {
+    font-size: clamp(1rem, 2vw, 1.25rem);
     font-weight: 500;
-    margin: 5px 1px;
+    margin: var(--spacing-sm) 0;
+    color: var(--text-primary);
 }
 
-.landing-numbers-element-subject{
-    font-size: larger;
-    font-weight: 500;
-    margin: 5px 1px;
-}
-
-.landing-numbers-element-underline{
-    margin: 5px 0px;
-    height: 3px;
+.landing-numbers-element-underline {
+    margin: var(--spacing-sm) 0;
+    height: 4px;
     width: 70% !important;
-    background-color: #19A741;
+    background: linear-gradient(90deg, var(--primary-green), var(--dark-green));
+    border-radius: 2px;
+    transition: width var(--transition-base);
+}
+
+.landing-numbers-element:hover .landing-numbers-element-underline {
+    width: 100% !important;
 }
 
 @media (max-width: 820px) {
-    .landing-numbers{
-        padding: 0px 5%;
+    .landing-numbers {
+        padding: var(--spacing-xl) 5%;
         flex-direction: column;
+        gap: var(--spacing-xl);
     }
-    .landing-numbers div{
-        margin-top: 20px;
+
+    .landing-numbers div {
+        margin-top: 0;
+    }
+
+    .landing-numbers-element {
+        width: 100%;
+        align-items: center;
     }
 }
 
 @media (max-width: 540px) {
-    .landing-numbers{
-        padding: 0px 5%;
-        flex-direction: column;
+    .landing-numbers {
+        padding: var(--spacing-lg) 5%;
     }
-    .landing-numbers div{
-        margin-top: 20px;
-    }
-    .landing-numbers-element-number{
-        font-size: 25px;
+
+    .landing-numbers-element-number {
+        font-size: clamp(1.75rem, 5vw, 2rem);
     }
 }

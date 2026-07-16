@@ -5,23 +5,21 @@ import LandingNumbers from '../components/CommonInterface/Landing/Numbers/Landin
 import LandingHowHelps from '../components/CommonInterface/Landing/HowHelps/LandingHowHelps'
 import LandingReviews from '../components/CommonInterface/Landing/Reviews/LandingReviews'
 import LandingFaqs from '../components/CommonInterface/Landing/Faqs/LandingFaqs'
-import LandingStartApplying from '../components/CommonInterface/Landing/StartApplying/LandingStartApplying'
 import LandingFooter from '../components/CommonInterface/Landing/LandingFooter/LandingFooter'
 import About from '../components/CommonInterface/Landing/About/About'
 import WhyJoinUs from '../components/CommonInterface/Landing/WhyJoinUs/WhyJoinUs'
 function LandingPage() {
   return (
     <>
-        <LandingNavbar/>
-        <LandingHero/>
-        <About/>
-        <LandingNumbers/>
-        <LandingHowHelps/>
-        <WhyJoinUs/>
-        <LandingReviews/>
-        <LandingFaqs/>
-        <LandingStartApplying/>
-        <LandingFooter/>
+      <LandingNavbar />
+      <LandingHero />
+      <About />
+      <LandingNumbers />
+      <LandingHowHelps />
+      <WhyJoinUs />
+      <LandingReviews />
+      <LandingFaqs />
+      <LandingFooter />
     </>
   )
 }
